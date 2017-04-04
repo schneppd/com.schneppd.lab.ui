@@ -40,6 +40,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-44-TwQ">
                                         <rect key="frame" x="0.0" y="50.5" width="179" height="30"/>
                                         <state key="normal" title="Set preferred rabbit breed"/>
+                                        <connections>
+                                            <action selector="ExecuteSetPrefferedRabbitBreed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vqy-fv-B8x"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -54,6 +57,10 @@
                             <constraint firstItem="1qm-WS-7wR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ncI-px-3oc"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="rabbitLabel" destination="bbj-CR-BtB" id="V0y-Wq-XcR"/>
+                        <outlet property="rabitInput" destination="MBN-Gy-7eb" id="KFX-Gh-2si"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
