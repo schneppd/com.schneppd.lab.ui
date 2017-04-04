@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,28 +23,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-WS-7wR">
-                                <rect key="frame" x="16" y="40" width="343" height="80.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-WS-7wR">
+                                <rect key="frame" x="16" y="40" width="343" height="400.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rabbit breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-CR-BtB">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rabbit breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-CR-BtB">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter rabbit breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBN-Gy-7eb">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter rabbit breed" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBN-Gy-7eb">
                                         <rect key="frame" x="0.0" y="20.5" width="138.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-44-TwQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UQE-44-TwQ">
                                         <rect key="frame" x="0.0" y="50.5" width="179" height="30"/>
                                         <state key="normal" title="Set preferred rabbit breed"/>
                                         <connections>
                                             <action selector="ExecuteSetPrefferedRabbitBreed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vqy-fv-B8x"/>
                                         </connections>
                                     </button>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="1qY-Oh-LVc">
+                                        <rect key="frame" x="0.0" y="80.5" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="320" id="1FA-4b-1kj"/>
+                                            <constraint firstAttribute="width" secondItem="1qY-Oh-LVc" secondAttribute="height" multiplier="1:1" id="3wh-fl-Xqd"/>
+                                            <constraint firstAttribute="width" constant="320" id="5nc-Gr-76z"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aNC-55-iPV" appends="YES" id="bei-x4-Ak8"/>
+                                        </connections>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bbj-CR-BtB" firstAttribute="leading" secondItem="1qm-WS-7wR" secondAttribute="leading" id="Z1C-Yv-veC"/>
@@ -53,18 +66,28 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="1qm-WS-7wR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="AeQ-J2-OC6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1qm-WS-7wR" secondAttribute="trailing" id="QsX-rp-0xL"/>
                             <constraint firstItem="1qm-WS-7wR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ncI-px-3oc"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="rabbitLabel" destination="bbj-CR-BtB" id="V0y-Wq-XcR"/>
+                        <outlet property="rabbitPicture" destination="1qY-Oh-LVc" id="YQc-ig-Xoo"/>
                         <outlet property="rabitInput" destination="MBN-Gy-7eb" id="KFX-Gh-2si"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="aNC-55-iPV">
+                    <connections>
+                        <action selector="ExecuteSelectImageLibrary:" destination="BYZ-38-t0r" id="5hr-ay-dHP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="320" height="320"/>
+    </resources>
 </document>

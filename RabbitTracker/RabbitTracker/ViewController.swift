@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     //MARK: Properties
     @IBOutlet weak var rabitInput: UITextField!
     
     @IBOutlet weak var rabbitLabel: UILabel!
+    @IBOutlet weak var rabbitPicture: UIImageView!
 
 
     
@@ -33,6 +34,72 @@ class ViewController: UIViewController, UITextFieldDelegate {
         rabbitLabel.text = "Default breed"
     }
     
+    
+    
+    @IBAction func selectImageFromPhotoLibrary(_ sender: UITapGestureRecognizer) {
+        
+        
+        // Hide the keyboard.
+        rabitInput.resignFirstResponder()
+        
+        
+        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
+        let imagePickerController = UIImagePickerController()
+        
+
+        
+        
+        // Only allow photos to be picked, not taken.
+        imagePickerController.sourceType = .photoLibrary
+        
+        
+        // Make sure ViewController is notified when the user picks an image.
+        imagePickerController.delegate = self
+        
+        // show the viwer of imagePickerController
+        present(imagePickerController, animated: true, completion: nil)
+    }
+    
+    //MARK: UIImagePickerControllerDelegate
+    
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+        
+        // Dismiss the picker if the user canceled.
+        dismiss(animated: true, completion: nil)
+        
+
+    }
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
+        // The info dictionary may contain multiple representations of the image. You want to use the original.
+        guard let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
+        }
+        
+        
+        // Set photoImageView to display the selected image.
+        rabbitPicture.image = selectedImage
+        
+        // Dismiss the picker.
+        dismiss(animated: true, completion: nil)
+        
+
+        
+
+        
+
+    }
+    
+
+    
+
+    
     //MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -46,6 +113,27 @@ class ViewController: UIViewController, UITextFieldDelegate {
             rabbitLabel.text = textField.text
     }
     
+    @IBAction func ExecuteSelectImageLibrary(_ sender: UITapGestureRecognizer) {
+        // Hide the keyboard.
+        rabitInput.resignFirstResponder()
+        
+        
+        // UIImagePickerController is a view controller that lets a user pick media from their photo library.
+        let imagePickerController = UIImagePickerController()
+        
+        
+        
+        
+        // Only allow photos to be picked, not taken.
+        imagePickerController.sourceType = .photoLibrary
+        
+        
+        // Make sure ViewController is notified when the user picks an image.
+        imagePickerController.delegate = self
+        
+        // show the viwer of imagePickerController
+        present(imagePickerController, animated: true, completion: nil)
+    }
 
     
 
