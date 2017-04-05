@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate,UIImagePickerControl
     
     @IBOutlet weak var rabbitLabel: UILabel!
     @IBOutlet weak var rabbitPicture: UIImageView!
+    @IBOutlet weak var rabbitRating: RatingControl!
 
 
     

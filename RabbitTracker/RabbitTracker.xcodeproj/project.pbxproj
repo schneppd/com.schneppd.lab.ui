@@ -14,6 +14,7 @@
 		2C7A35DA1E93970700EE3AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A35D81E93970700EE3AF1 /* LaunchScreen.storyboard */; };
 		2C7A35E51E93970700EE3AF1 /* RabbitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A35E41E93970700EE3AF1 /* RabbitTrackerTests.swift */; };
 		2C7A35F01E93970800EE3AF1 /* RabbitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A35EF1E93970800EE3AF1 /* RabbitTrackerUITests.swift */; };
+		2C9CE1E71E94DB4D006B5A30 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2C7A35EB1E93970800EE3AF1 /* RabbitTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RabbitTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C7A35EF1E93970800EE3AF1 /* RabbitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitTrackerUITests.swift; sourceTree = "<group>"; };
 		2C7A35F11E93970800EE3AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				2C7A35CF1E93970700EE3AF1 /* AppDelegate.swift */,
 				2C7A35D11E93970700EE3AF1 /* ViewController.swift */,
 				2C7A35D31E93970700EE3AF1 /* Main.storyboard */,
+				2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */,
 				2C7A35D61E93970700EE3AF1 /* Assets.xcassets */,
 				2C7A35D81E93970700EE3AF1 /* LaunchScreen.storyboard */,
 				2C7A35DB1E93970700EE3AF1 /* Info.plist */,
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C7A35D21E93970700EE3AF1 /* ViewController.swift in Sources */,
+				2C9CE1E71E94DB4D006B5A30 /* RatingControl.swift in Sources */,
 				2C7A35D01E93970700EE3AF1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -507,6 +511,7 @@
 				2C7A35F61E93970800EE3AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C7A35F71E93970800EE3AF1 /* Build configuration list for PBXNativeTarget "RabbitTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +520,7 @@
 				2C7A35F91E93970800EE3AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C7A35FA1E93970800EE3AF1 /* Build configuration list for PBXNativeTarget "RabbitTrackerUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +529,7 @@
 				2C7A35FC1E93970800EE3AF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

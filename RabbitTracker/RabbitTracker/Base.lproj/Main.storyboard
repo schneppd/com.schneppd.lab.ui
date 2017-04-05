@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="1qm-WS-7wR">
-                                <rect key="frame" x="16" y="40" width="343" height="400.5"/>
+                                <rect key="frame" x="16" y="40" width="343" height="450.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rabbit breed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbj-CR-BtB">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -57,6 +57,17 @@
                                             <outletCollection property="gestureRecognizers" destination="aNC-55-iPV" appends="YES" id="bei-x4-Ak8"/>
                                         </connections>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="caz-6y-4Sr" customClass="RatingControl" customModule="RabbitTracker" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="400.5" width="282" height="50"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                                <size key="value" width="50" height="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="bbj-CR-BtB" firstAttribute="leading" secondItem="1qm-WS-7wR" secondAttribute="leading" id="Z1C-Yv-veC"/>
@@ -74,6 +85,7 @@
                     <connections>
                         <outlet property="rabbitLabel" destination="bbj-CR-BtB" id="V0y-Wq-XcR"/>
                         <outlet property="rabbitPicture" destination="1qY-Oh-LVc" id="YQc-ig-Xoo"/>
+                        <outlet property="rabbitRating" destination="caz-6y-4Sr" id="UZk-iK-XQP"/>
                         <outlet property="rabitInput" destination="MBN-Gy-7eb" id="KFX-Gh-2si"/>
                     </connections>
                 </viewController>
