@@ -15,6 +15,7 @@
 		2C7A35E51E93970700EE3AF1 /* RabbitTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A35E41E93970700EE3AF1 /* RabbitTrackerTests.swift */; };
 		2C7A35F01E93970800EE3AF1 /* RabbitTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7A35EF1E93970800EE3AF1 /* RabbitTrackerUITests.swift */; };
 		2C9CE1E71E94DB4D006B5A30 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */; };
+		2C9CE1E91E951450006B5A30 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9CE1E81E951450006B5A30 /* Rabbit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C7A35EF1E93970800EE3AF1 /* RabbitTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RabbitTrackerUITests.swift; sourceTree = "<group>"; };
 		2C7A35F11E93970800EE3AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		2C9CE1E81E951450006B5A30 /* Rabbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				2C7A35CF1E93970700EE3AF1 /* AppDelegate.swift */,
 				2C7A35D11E93970700EE3AF1 /* ViewController.swift */,
+				2C9CE1E81E951450006B5A30 /* Rabbit.swift */,
 				2C7A35D31E93970700EE3AF1 /* Main.storyboard */,
 				2C9CE1E61E94DB4D006B5A30 /* RatingControl.swift */,
 				2C7A35D61E93970700EE3AF1 /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				2C7A35D21E93970700EE3AF1 /* ViewController.swift in Sources */,
 				2C9CE1E71E94DB4D006B5A30 /* RatingControl.swift in Sources */,
 				2C7A35D01E93970700EE3AF1 /* AppDelegate.swift in Sources */,
+				2C9CE1E91E951450006B5A30 /* Rabbit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
