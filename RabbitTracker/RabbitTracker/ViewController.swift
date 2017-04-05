@@ -31,9 +31,6 @@ class ViewController: UIViewController, UITextFieldDelegate,UIImagePickerControl
     }
     
     //MARK: Actions
-    @IBAction func ExecuteSetPrefferedRabbitBreed(_ sender: UIButton) {
-        rabbitLabel.text = "Default breed"
-    }
     
     
     
